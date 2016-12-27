@@ -41,7 +41,7 @@ app.get('/tweets.css', function(request, response) {
             let id = '#tweet-' + (i + 1);
 
             let avatarcss = [id, ' .avatar {', 'background: url("', avatar, '");}'].join('');
-            let namecss = [id, ' .name::before { content: "', name, '";}'].join('');
+            let namecss = [id, ' .name::before { content: "@', name, '";}'].join('');
             let handlecss = [id, ' .handle::after { content: "', handle, '";}'].join('');
             let copycss = [id, ' .copy::before { content: "', copy, '";}'].join('');
             let timestampcss = [id, ' .timestamp::after { content: "',
