@@ -24,7 +24,10 @@ app.get('/tweets.css', function(request, response) {
         bearer_token: token
       };
       let client = new Twitter(config);
-      let params = { q: process.env.TWITTER_SEARCH_STRING };
+      let params = { 
+        q: process.env.TWITTER_SEARCH_STRING,
+        result_type: 'recent'
+      };
       client.get('search/tweets.json', params)
         .then(function (tweets){
           let statuses = tweets.statuses;
