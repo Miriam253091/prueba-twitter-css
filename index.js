@@ -34,7 +34,7 @@ app.get('/tweets.css', function(request, response) {
           let css = ['@media screen and (-webkit-min-device-pixel-ratio: 0) {',
             '.tweet .copy:before {white-space: pre-wrap;',
             '}'];
-          for (let i = 0; i < 16; i++){
+          for (let i = 0; i < 14; i++){
             let user = statuses[i].user;
             let avatar = user.profile_image_url_https;
             let name = user.name;
